@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+/*!
+ * Styles
+ * 
+ * 
+ */
+
+
+/**
+ * Micro clearfix
+ */
+ 
+.cf { zoom: 1;}
+.cf:before, .cf:after { content: ""; display: table;}
+.cf:after { clear: both;}
+
+
+
+/**
+ * 必要要素の初期値
+ */
+
+body {
+	width: 100%;
+	margin: 1em 0;
+	padding: 0;
+	color: #222;
+	font-family: sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 0.5em;
+	line-height: 1.1;
+	font-family: "Hiragino Mincho Pro", "Hiragino Mincho ProN", serif;
+	letter-spacing: -1px;
+}
+
+p {
+	margin: 0 0 1em;
+	line-height: 1.4;
+	color: #333;
+	text-align: justify;
+}
+
+ul {
+	margin: 0 0 2em;
+	padding: 0;
+	list-style-position: inside;
+}
+
+
+
+/**
+ * Basic Styles
+ */
+
+#document {
+	margin: 0;
+}
+
+
+header {
+	padding-left: 6%;
+}
+
+nav {
+	margin: 0;
+}
+
+#base-main {
+	width: 88%;
+	margin: 2em auto 1em;
+}
+
+article.main-contents {
+	width: 100%;
+}
+
+section {
+	margin: 0 0 2em;
+}
+
+aside.main-side {
+	width: 100%;
+}
+
+footer {
+	width: 100%;
+	text-align: center;
+}
+
+
+
+/**
+ * 各要素のデザイン、レイアウト
+ */
+
+h1.header-sitetitle {
+	font-size: 2.3em;
+	margin: 0 0 0.2em;
+}
+
+p.header-tagline {
+	font-size: 0.9em;
+	text-align: left;
+	text-transform: uppercase; /* 全てを大文字で表示 */
+	color: #555;
+}
+
+
+nav ul.nav-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+}
+
+nav li.nav-item {
+	display: block;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	line-height: 2.5em;
+	border-bottom: 1px solid #333;
+}
+	nav li.nav-item a {
+		color: #fff;
+	}
+
+
+article.main-contents h1 {
+	font-size: 2em;
+}
+
+article.main-contents h2 {
+	font-size: 1.6em;
+	margin-top: 1.3em;
+}
+
+
+
+aside.main-side h1 {
+	font-size: 1.3em;
+	color: #333;
+	border-bottom: 1px dotted #333;
+}
+
+aside.main-side ul li {
+	font-size: 1.1em;
+	line-height: 1.5;
+}
+
+
+small {
+	text-transform: uppercase;
+}

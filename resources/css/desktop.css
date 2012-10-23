@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/*!
+ * Desktop Styles
+ * 
+ * 
+ */
+
+
+/**
+ * Basic Styles
+ */
+
+nav {
+	margin: 0;
+	padding: 0 0 0 6%;
+	background-color: #000;
+}
+
+nav ul.nav-list {
+	padding: 1px 0;
+}
+
+nav li.nav-item {
+	float: left;
+	width: 100px;
+	margin: 0;
+	text-align: center;
+	line-height: 2.5em;
+	border-left: 1px solid #333;
+	border-right: 1px solid #222;
+	border-bottom: none;
+}
+
+nav li.nav-item {
+	display: block;
+}
+
+article.main-contents {
+	width: 64%;
+	float: left;
+}
+
+aside.main-side {
+	width: 30%;
+	float: right;
+}
+
+aside.main-side ul li {
+	font-size: 1em;
+}
