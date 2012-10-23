@@ -245,3 +245,53 @@ aside.main-side ul li {
 }
 
 }
+
+
+/* Media Queries 解像度 961px以上の場合 */
+@media only screen and (min-width: 961px){
+
+body {
+	margin-top: 0;
+}
+
+/**
+ * Basic Styles
+ */
+
+#document {
+	margin: 0 auto;
+	padding: 0 0 30px;
+	width: 958px;
+	border: 1px solid #f0f0f0;
+}
+
+
+header {
+	margin: 0;
+	padding: 10px 30px;
+	background-color: #000;
+	color: #c0c0c0;
+}
+
+#base-main {
+	width: auto;
+	margin: 2em 0 1em;
+	padding: 0 30px;
+}
+
+article.main-contents {
+	float: left;
+	width: 600px;
+	padding: 0 30px 0 0;
+	margin-right: 29px;
+	border-right: 1px solid #f0f0f0;
+}
+
+aside.main-side {
+	float: left;
+	width: 238px;
+	margin: 0;
+	padding: 0;
+}
+
+}
