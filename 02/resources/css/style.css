@@ -77,8 +77,9 @@ ul {
 header {
 	margin: 0;
 	padding: 1% 6%;
-	background-color: #222222;
+	background: #222222 url(../img/header_bg.png) no-repeat 50% 50%;
 	color: #c0c0c0;
+	overflow: hidden;
 }
 
 nav {
@@ -108,19 +109,11 @@ footer {
 	text-align: center;
 }
 
-img {
-	width: 100%; /* max-width 非対応のブラウザのために指定 */
-	max-width: 100%;
-	height: auto;
-	border: 1px solid #f0f0f0;
-}
-
 /**
  * 各要素のデザイン、レイアウト
  */
 
 h1.header-sitetitle {
-	font-family: "Losa", serif;
 	font-weight: 400;
 	font-style: italic;
 	font-size: 40px;
@@ -130,13 +123,11 @@ h1.header-sitetitle {
 	margin: 0.5em 0 0.2em 0;
 }
 
-p.header-tagline {
-	font-size: 14px;
-	font-size: 1.4rem;
-	text-align: left;
-	text-transform: uppercase; /* 全てを大文字で表示 */
-	color: #555;
-}
+	h1.header-sitetitle img {
+		width: 100%;
+		max-width: 686px;
+		height: auto;
+	}
 
 
 nav ul.nav-list {
@@ -203,11 +194,34 @@ small {
 	margin: 0 0 2em;
 }
 
+.wgt-image img {
+	width: 100%; /* max-width 非対応のブラウザのために指定 */
+	max-width: 100%;
+	height: auto;
+	border: 1px solid #f0f0f0;
+}
 
+
+
+/* Media Queries iphone 4以上の場合 */
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+
+h1.header-sitetitle {
+	background: url(../img/sitetitle_ratina.png) no-repeat;
+	background-size: 100%;
+	width: 280px;
+	height: 60px;
+}
+
+	h1.header-sitetitle img {
+		display: none;
+	}
+
+}
 
 
 /* Media Queries 解像度 481px以上の場合 */
-@media only screen and (min-width: 321px){
+@media only screen and (min-width: 481px){
 
 p {
 	font-size: 20px;
