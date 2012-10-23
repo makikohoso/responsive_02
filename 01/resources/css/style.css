@@ -175,16 +175,6 @@ nav {
 	background-color: #000;
 }
 
-article.main-contents {
-	width: 64%;
-	float: left;
-}
-
-aside.main-side {
-	width: 30%;
-	float: right;
-}
-
 
 /**
  * 各要素のデザイン、レイアウト
@@ -205,12 +195,16 @@ nav li.nav-item {
 	border-bottom: none;
 }
 
-nav li.nav-item {
-	display: block;
+.side-01 {
+	float: left;
+	width: 47%;
+	padding-right: 3%;
 }
 
-aside.main-side ul li {
-	font-size: 1em;
+.side-02 {
+	float: right;
+	width: 47%;
+	padding-right: 3%;
 }
 
 }
@@ -219,4 +213,35 @@ aside.main-side ul li {
 
 /* Media Queries 解像度 769px以上の場合 */
 @media only screen and (min-width: 769px){
+
+/**
+ * Basic Styles
+ */
+
+article.main-contents {
+	width: 64%;
+	float: left;
+}
+
+aside.main-side {
+	width: 30%;
+	float: right;
+}
+
+
+/**
+ * 各要素のデザイン、レイアウト
+ */
+
+aside.main-side ul li {
+	font-size: 1em;
+}
+
+.side-01,
+.side-02 {
+	float: none;
+	width: 100%;
+	padding: 0;
+}
+
 }
