@@ -159,3 +159,64 @@ aside.main-side ul li {
 small {
 	text-transform: uppercase;
 }
+
+
+
+/* Media Queries 解像度 481px以上の場合 */
+@media only screen and (min-width: 481px){
+
+/**
+ * Basic Styles
+ */
+
+nav {
+	margin: 0;
+	padding: 0 0 0 6%;
+	background-color: #000;
+}
+
+article.main-contents {
+	width: 64%;
+	float: left;
+}
+
+aside.main-side {
+	width: 30%;
+	float: right;
+}
+
+
+/**
+ * 各要素のデザイン、レイアウト
+ */
+
+nav ul.nav-list {
+	padding: 1px 0;
+}
+
+nav li.nav-item {
+	float: left;
+	width: 100px;
+	margin: 0;
+	text-align: center;
+	line-height: 2.5em;
+	border-left: 1px solid #333;
+	border-right: 1px solid #222;
+	border-bottom: none;
+}
+
+nav li.nav-item {
+	display: block;
+}
+
+aside.main-side ul li {
+	font-size: 1em;
+}
+
+}
+
+
+
+/* Media Queries 解像度 769px以上の場合 */
+@media only screen and (min-width: 769px){
+}
