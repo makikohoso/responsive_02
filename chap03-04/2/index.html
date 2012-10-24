@@ -21,7 +21,7 @@
 <![endif]-->
 <script src="resources/js/respond.min.js"></script>
 <script src="resources/js/jquery-1.8.2.min.js"></script>
-<script src="resources/js/jquery.fittext.js"></script>
+<script src="resources/js/jquery.slabtext.min.js"></script>
 </head>
 
 <body>
@@ -94,8 +94,15 @@
 <small>&copy; 2012 - Responsive Template / All right reserved.</small>
 <!-- /#base-footer --></footer>
 <!-- /#document --></div>
-<script type="text/javascript">
-	$(".js-fit").fitText(1);
+<script>
+	function slabTextHeadlines(){
+	$(".js-fit").slabText({
+		"viewportBreakpoint":240
+	});
+	};
+	$(window).load(function(){
+		setTimeout(slabTextHeadlines, 1000);
+	});
 </script>
 </body>
 </html>

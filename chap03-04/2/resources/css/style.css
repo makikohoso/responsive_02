@@ -203,6 +203,30 @@ small {
 
 
 
+/**
+ * js-parts
+ */
+
+.slabtexted .slabtext {
+	display:-moz-inline-box;
+	display:inline-block;
+	white-space:nowrap;
+}
+.slabtextinactive .slabtext{
+	display:inline;
+	white-space:normal;
+	font-size:1em !important;
+	letter-spacing:inherit !important;
+	word-spacing:inherit !important;
+	*letter-spacing:0 !important;
+	*word-spacing:0 !important;
+}
+.slabtextdone .slabtext{
+	display:block;
+	line-height:0.9;
+}
+
+
 /* Media Queries iphone 4以上の場合 */
 @media only screen and (-webkit-min-device-pixel-ratio:2){
 
