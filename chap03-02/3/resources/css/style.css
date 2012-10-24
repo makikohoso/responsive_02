@@ -203,23 +203,6 @@ small {
 
 
 
-/* Media Queries iphone 4以上の場合 */
-@media only screen and (-webkit-min-device-pixel-ratio:2){
-
-h1.header-sitetitle {
-	background: url(../img/sitetitle_ratina.png) no-repeat;
-	background-size: 100%;
-	width: 280px;
-	height: 60px;
-}
-
-	h1.header-sitetitle img {
-		display: none;
-	}
-
-}
-
-
 /* Media Queries 解像度 481px以上の場合 */
 @media only screen and (min-width: 481px){
 
