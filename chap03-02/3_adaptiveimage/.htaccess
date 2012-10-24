@@ -1,16 +1,22 @@
-# Responsive Images 
-# Mobile-First images that scale responsively and responsibly
-# Copyright 2010, Scott Jehl, Filament Group, Inc 
-# Dual licensed under the MIT or GPL Version 2 licenses. 
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks
+  RewriteEngine On
 
-# //Start Responsive Images 
-RewriteEngine On
+  # Adaptive-Images -----------------------------------------------------------------------------------
 
-# direct image requests to temp
-RewriteCond %{QUERY_STRING} full=(.*)&?
-RewriteRule (.*)rwd-router/.*\.(jpe?g|png|gif|webp) $1%1 [L]
+  # Add any directories you wish to omit from the Adaptive-Images process on a new line, as follows:
+  # RewriteCond %{REQUEST_URI} !ignore-this-directory
+  # RewriteCond %{REQUEST_URI} !and-ignore-this-directory-too
+  
+  RewriteCond %{REQUEST_URI} !assets
 
-# ignore trap for non-image requests, rewrite URL without trap segment
-RewriteRule (.*)rwd-router/(.*)$ $1$2
+  # don't apply the AI behaviour to images inside AI's cache folder:
+  RewriteCond %{REQUEST_URI} !ai-cache
+    
+  # Send any GIF, JPG, or PNG request that IS NOT stored inside one of the above directories
+  # to adaptive-images.php so we can select appropriately sized versions
+  
+  RewriteRule \.(?:jpe?g|gif|png)$ adaptive-images.php
 
-# //End Responsive Images
+  # END Adaptive-Images -------------------------------------------------------------------------------
+</IfModule>

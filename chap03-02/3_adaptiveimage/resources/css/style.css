@@ -186,20 +186,6 @@ small {
 }
 
 
-/**
- * wgt-parts
- */
-
-.wgt-image {
-	margin: 0 0 2em;
-}
-
-.wgt-image img {
-	width: 100%; /* max-width 非対応のブラウザのために指定 */
-	max-width: 100%;
-	height: auto;
-	border: 1px solid #f0f0f0;
-}
 
 
 
