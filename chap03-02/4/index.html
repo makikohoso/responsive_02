@@ -25,7 +25,11 @@
 <body>
 <div id="document">
 <header id="base-header">
-<h1 class="header-sitetitle"><img src="resources/img/sitetitle.png" alt="Responsive Web Design"></h1>
+<h1 class="header-sitetitle">
+<noscript data-large="resources/img/sitetitle_large.png" data-small="resources/img/sitetitle_small.png">
+<img src="resources/img/sitetitle_large.png" alt="Responsive Web Design">
+</h1>
+</noscript>
 <!-- /#base-header --></header>
 
 
@@ -92,5 +96,15 @@
 <small>&copy; 2012 - Responsive Template / All right reserved.</small>
 <!-- /#base-footer --></footer>
 <!-- /#document --></div>
+<script src="resources/js/jquery-1.8.2.min.js"></script>
+<script>
+$("noscript[data-large][data-small]").each(function(){
+  //スクリーンの画像が480pxより大きかったら大きい画像で小さかったら小さい画像のパスを取得
+  var src=screen.width>=480? $(this).data("large"):$(this).data("small");
+　
+  // img要素をnoscript要素の後に追加する
+  $("<img src='"+src+"' alt='"+$(this).data("alt")+"' />").insertAfter($(this)); 
+});
+</script>
 </body>
 </html>
