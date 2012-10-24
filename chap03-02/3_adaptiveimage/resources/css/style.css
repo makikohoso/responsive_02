@@ -113,7 +113,7 @@ footer {
  * 各要素のデザイン、レイアウト
  */
 
-h1.header-sitetitle {
+/*h1.header-sitetitle {
 	font-weight: 400;
 	font-style: italic;
 	font-size: 40px;
@@ -128,7 +128,7 @@ h1.header-sitetitle {
 		max-width: 686px;
 		height: auto;
 	}
-
+*/
 
 nav ul.nav-list {
 	list-style: none;
