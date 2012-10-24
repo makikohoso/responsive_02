@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Apsap">
 <link rel="stylesheet" href="resources/css/normalize.css">
 <link rel="stylesheet" href="resources/css/style.css">
+<script type="text/javascript" src="http://cdn.sublimevideo.net/js/mtt8xnt2.js"></script>
 <!--[if lt IE 9]>
 <script src="resources/js/html5shiv-printshiv.js"></script>
 <![endif]-->
@@ -43,12 +44,9 @@
 <div id="base-main" class="cf">
 <article class="main-contents">
 <div class="js-movie">
-<iframe src="" width="600" height="337" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-<!-- /.js-movie --></div>
-
-<div class="js-movie">
-<embed src="resources/img/test.mp4" width="600" height="337"
-autoplayer="true" controller="true">
+<video id="movie-video" width="600" height="337" poster="" preload="none">
+<source src="resources/img/test_ipod.mp4">
+</video>
 <!-- /.js-movie --></div>
 
 
@@ -103,12 +101,36 @@ autoplayer="true" controller="true">
 <!-- /#base-footer --></footer>
 <!-- /#document --></div>
 <script src="resources/js/jquery-1.8.2.min.js"></script>
-<script src="resources/js/jquery.fitvids.js"></script>
 <script>
-$(document).ready(function(){
-	//target
-	$(".js-movie").fitVids();
-});
+(function() {
+
+  // Prevents some flickering
+  $('#movie-video').css("visibility", "hidden");
+
+  // Fluid column video is inside of
+  var fluidParent = $(".main-contents > .js-movie"),
+  newWidth, newHeight;
+	console.log(fluidParent);
+
+  // Gets called when video needs resizing
+  function resizeVideo() {
+    newWidth = fluidParent.width();
+    // 1.78125 == Aspect Ratio of my videos
+    sublimevideo.resize('movie-video', newWidth, newWidth/1.78125);
+  };
+
+  $(window).resize(function() {
+    resizeVideo();
+  });
+
+  // When the resources are ready, 
+  // load up the video and size it correctly
+  sublimevideo.ready(function() {
+    sublimevideo.prepare('movie-video');
+    resizeVideo();
+  });
+
+  }());
 </script>
 </body>
 </html>
